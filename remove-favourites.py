@@ -21,8 +21,8 @@ user = mstdn.account_verify_credentials()
 # collect favourites
 posts = mstdn.favourites (limit = 40)
 
-# if posts lenght equals or is greated than 40, remove the last 20
-if len(posts) >= 40:
+# Just keep the last 20 posts
+if len(posts) >= 20:
   posts = posts[20:40]
 
   for post in posts:
