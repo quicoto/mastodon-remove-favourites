@@ -1,0 +1,32 @@
+name: Build
+on:
+  schedule:
+    - cron: '30 5 * * *'
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+        with:
+            persist-credentials: false
+
+      - name: Install Python
+        uses: actions/setup-python@v4
+        with:
+            python-version: '3.9'
+            cache: 'pip'
+            cache-dependency-path: 'remove-favourites.py'
+
+      - name: Install Deps
+        run: pip3 install argparse Mastodon.py
+
+      - name: Build
+        run: |
+          python3 remove-favourites.py --instance https://ricard.social        \
+              --access-token ${{ secrets.ACCESS_TOKEN }}
