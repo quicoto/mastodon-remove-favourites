@@ -2,6 +2,6 @@
 
 Periodically removes old favourites using the great [Mastodon.py](https://github.com/halcy/Mastodon.py)
 
-## To Do
+It tries to queries 40 favourites, if you have 40 or more it will cut 20 off and unfavourite them.
 
-https://mastodonpy.readthedocs.io/en/stable/05_statuses.html
+This is just an experiment to keep the user's account lean of favourites, just keep the most recent.
