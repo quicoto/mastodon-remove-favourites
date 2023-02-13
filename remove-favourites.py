@@ -21,9 +21,9 @@ user = mstdn.account_verify_credentials()
 # collect favourites
 posts = mstdn.favourites (limit = 40)
 
-# Just keep the last 20 posts
-if len(posts) >= 20:
-  posts = posts[20:40]
+# Just keep the last 30 posts
+if len(posts) >= 30:
+  posts = posts[30:40]
 
   for post in posts:
     print(post["url"])
