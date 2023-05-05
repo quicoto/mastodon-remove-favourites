@@ -26,5 +26,5 @@ if len(posts) >= 30:
 
   for post in posts:
     # Print the message "Favorite removed:" and the URL in the same line
-    print("Favorite removed: " + post["url"])
+    print("Favourite removed: " + post["url"])
     mstdn.status_unfavourite(post["id"])
