@@ -25,5 +25,5 @@ jobs:
 
       - name: Build
         run: |
-          python3 remove-favourites.py --instance https://ricard.social        \
+          python3 remove-favourites.py --instance ${{ secrets.INSTANCE }}        \
               --access-token ${{ secrets.ACCESS_TOKEN }}

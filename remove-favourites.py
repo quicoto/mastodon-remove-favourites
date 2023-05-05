@@ -16,7 +16,6 @@ mstdn = Mastodon(
 		access_token = args.access_token,
 		api_base_url = args.instance
 		)
-user = mstdn.account_verify_credentials()
 
 # collect favourites
 posts = mstdn.favourites (limit = 40)

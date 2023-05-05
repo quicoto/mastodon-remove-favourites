@@ -10,3 +10,4 @@ This is just an experiment to keep the user's account lean of favourites, just k
 
 1. Create an application access token in Mastodon with `read:favourites` and `write:favourites` permissions
 2. Create a repository secret called `ACCESS_TOKEN` with that value
+3. Create a repository secret called `INSTANCE` with your Mastodon instance URL (eg. `https://ricard.social`)
